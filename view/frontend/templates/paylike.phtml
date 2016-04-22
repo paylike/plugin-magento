@@ -1,0 +1,8 @@
+<?php $paylikeApi = $this->getPublicApiKey(); ?>
+
+<?php if ($paylikeApi): ?>
+    <script>
+        var paylike = Paylike('<?php echo $paylikeApi ?>');
+        var paylikeConfig = <?php echo $this->getConfigJSON() ?>;        
+    </script>
+<?php endif; ?>
